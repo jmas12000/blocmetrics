@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="media center">
+      <% if user_signed_in? %>
+        <% avatar_url = @user.avatar_url(250) %>
+        <% if avatar_url %>
+          <div class="avatar-container">
+            <div class = "avatar-image" >
+              <%= image_tag avatar_url, class: 'media-object' %>
+            </div>
+          </div>
+        <% end %>
+        <br>
+        <div class="media-body">
+          <h2 class="media-heading"><%= @user.email %></h2>
+        </div>
+        <div>
+          
+        </div>
+      <% else %>
+        <div class="jumbotron">
+          <h1 class= "title text-center">Blocmetrics</h1>
+          <p class= "text-center">Blocmetrics is a site that offers an analytics service to track events on websites</p>
+          <p class= "text-center">
+            <%= link_to "Sign In", new_user_session_path %> or
+            <%= link_to "Sign Up",new_user_registration_path, class: 'btn btn-primary' %> today!
+          </p>
+        </div>
+        <div class="row mission">
+          <div class="col-md-6">
+            <h2>Track the data</h2>
+            <p>This analytics service was built with A client-side JavaScript snippet that allows a user to track events on their website.</p>
+          </div>
+          <div class="col-md-6">
+            <h2>Save the Data</h2>
+            <p> This analytics service was also built with A server-side API that captures and saves those events to a database.</p>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

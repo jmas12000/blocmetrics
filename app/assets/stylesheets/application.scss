@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #000;
+}
+
+.navbar {
+  background-color: #011;
+}
+
+.nav {
+  background-color: #ededed;
+  box-shadow: 0px 0px 20px #c1e5e5;
+  background: linear-gradient(#f5f5f5, #e1e1e1, #f5f5f5); 
+  border-bottom: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.avatar {
+  margin-top: 6px;
+}
+
+.user-info {
+  padding-top: 25px;
+  padding-right: 5px;
+}
+
+.center {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.avatar-container {
+  width: 500px;
+  margin: auto auto;
+}
+
+.avatar-image {
+  width: 50%;
+  margin: 0 25%;
+}
+
+h2 {
+  color: white;
+  text-shadow: 1px 0px 1px #000;
+  padding: 0px 0px 35px 0px;
+  text-align: center;
+}
+
+h3 {
+  color: white;
+}
+
+h5 {
+  color: white;
+  padding-top: 10px;
+}
+
+blockquote {
+  color: #003000;
+}
+
+
+.alert-error {
+  background-color: #f2dede; 
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+ }
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+  
+.form-container {
+  width: 50%;
+  margin: 0 25%;
+}
+  
+.mission {
+  color: white;
+}
+ 
+.white {
+  color: white;
+}
+
+.number {
+  color: #555;
+}
