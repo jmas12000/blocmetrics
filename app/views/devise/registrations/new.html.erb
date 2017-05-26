@@ -14,7 +14,7 @@
       <div class="field">
         <span class= "white"><%= f.label :password %></span>
         <% if @minimum_password_length %>
-          <span class= "text-warning"><em>(<%= @minimum_password_length %> characters minimum)</em></span>
+          <span class= "black"><em>(<%= @minimum_password_length %> characters minimum)</em></span>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>

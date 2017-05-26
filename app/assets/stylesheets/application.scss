@@ -16,17 +16,17 @@
 @import "bootstrap";
 
 body {
-  background-color: #000;
+  background-color: #78a;
 }
 
 .navbar {
-  background-color: #011;
+  background-color: #78b;//#555;//#011;
 }
 
 .nav {
   background-color: #ededed;
   box-shadow: 0px 0px 20px #c1e5e5;
-  background: linear-gradient(#f5f5f5, #e1e1e1, #f5f5f5); 
+  background: linear-gradient(#e1e1e1, #f1f1f1, #fff);//#f5f5f5, #e1e1e1, #f5f5f5); 
   border-bottom: none;
 }
 
@@ -60,7 +60,7 @@ li {
 
 h2 {
   color: white;
-  text-shadow: 1px 0px 1px #000;
+  text-shadow: 1px 0px 1px #000; 
   padding: 0px 0px 35px 0px;
   text-align: center;
 }
@@ -118,6 +118,9 @@ blockquote {
  
 .white {
   color: white;
+}
+.black {
+  color: #222;
 }
 
 .number {
