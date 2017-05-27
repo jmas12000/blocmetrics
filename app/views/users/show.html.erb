@@ -12,10 +12,20 @@
         <% end %>
         <br>
         <div class="media-body">
-          <h2 class="media-heading"><%= @user.email %></h2>
+          <% if @user.username %>
+            <h2 class="media-heading">Welcome <%= @user.username %> !</h2>
+          <% else %>
+            <h2 class="media-heading">Welcome <%= @user.email %> !</h2>
+          <% end %>
         </div>
         <div>
-          
+        <div>
+          <h3>Registered Applications:</h3>
+          <%= render "registered_applications/registered_application" %>
+          <br>
+          <div class="form-container col-md-10">
+            <%= render partial:'registered_applications/form', locals: {user: @user, registered_application: @registered_application} %>
+          </div>  
         </div>
       <% else %>
         <div class="jumbotron title">

@@ -21,7 +21,7 @@
       </ul>
       <div class= "user-info"> 
         <% if user_signed_in? %>
-          <h5 class= "text-right"><small class="white">Signed in as: </small><strong><%= current_user.username || current_user.email %></strong></h5>
+          <h5 class= "text-right"><small class="white">Signed in as: </small><strong><%= current_user.email %></strong></h5>
         <% end %>
       </div>
     </div>
