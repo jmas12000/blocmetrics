@@ -1,7 +1,7 @@
-<% @registered_applications.each_with_index do |registered_app, index| %>
+<%@registered_applications.each_with_index do |registered_app, index|%>
   <div class="media text-success">
-    <h3 class= "number", id="registered_application-<%= registered_app.id%>"><b><%= index + 1 %>) <span class= "text-success"><%= link_to registered_app.name, user_registered_application_path(user_id= current_user.id, registered_application_id = registered_app.id), class: "text-danger"%></span></b><br /> 
-      <%= registered_app.URL %><%= link_to "",[registered_app.user, registered_app], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %><br /> 
+    <h3 class="number", id="registered_application-<%=registered_app.id%>"><b><%=index + 1%>) <span class="text-success"><%=link_to registered_app.name, user_registered_application_path(user_id = current_user.id, registered_application_id = registered_app.id), class:"text-danger"%></span></b><br /> 
+      <%=registered_app.url%><%=link_to "",[registered_app.user, registered_app], method: :delete, class:'glyphicon glyphicon-ok', remote: true%><br /> 
     </h3>
   </div>
-<% end %>
+<%end%>

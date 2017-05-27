@@ -1,6 +1,12 @@
-<div class= "container-fluid">
-  <div class = "row center">
-    <h1><%= @registered_application.name %><br />
-    <h3><em class="text-warning">Analytics for </em><b><%= @registered_application.URL %></b>
+<div class="container-fluid">
+  <div class ="row center">
+    <h1><%=@registered_application.name%><br />
+    <h3><em class="text-warning">Analytics for : </em><b><%=@registered_application.url%></b><br />
+    <h3 class="black">Events:</h3><br />
+    <%@events.each do |name,events|%>
+      <div>
+        <%=name%> <span class="badge"><%=events.count%></span>
+      </div>
+    <%end%>
   </div>
 </div>

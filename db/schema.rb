@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527033327) do
+ActiveRecord::Schema.define(version: 20170527172501) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "registered_application_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "registered_applications", force: :cascade do |t|
-    t.string   "name"
-    t.string   "URL"
+    t.string   "name",       null: false
+    t.string   "url",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
@@ -40,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170527033327) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "username"
+    t.string   "username",                            null: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

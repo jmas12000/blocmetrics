@@ -1,6 +1,7 @@
 class RegisteredApplicationsController < ApplicationController
   def show
     @registered_application = RegisteredApplication.find(params[:id])
+    @events = @registered_application.events.group_by(&:name)
   end
   
   def new
@@ -36,6 +37,6 @@ class RegisteredApplicationsController < ApplicationController
   private
   
   def registered_application_params
-    params.require(:registered_application).permit(:name, :URL)
+    params.require(:registered_application).permit(:name, :url)
   end
 end

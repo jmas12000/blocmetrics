@@ -1,39 +1,39 @@
 <div class="container-fluid">
   <div class="row">
     <div class="media center">
-      <% if user_signed_in? %>
-        <% avatar_url = @user.avatar_url(250) %>
-        <% if avatar_url %>
+      <%if user_signed_in?%>
+        <%avatar_url=@user.avatar_url(250)%>
+        <%if avatar_url%>
           <div class="avatar-container">
-            <div class = "avatar-image" >
-              <%= image_tag avatar_url, class: 'media-object' %>
+            <div class="avatar-image" >
+              <%=image_tag avatar_url, class:'media-object'%>
             </div>
           </div>
-        <% end %>
+        <%end%>
         <br>
         <div class="media-body">
-          <% if @user.username %>
-            <h2 class="media-heading">Welcome <%= @user.username %> !</h2>
-          <% else %>
-            <h2 class="media-heading">Welcome <%= @user.email %> !</h2>
-          <% end %>
+          <%if @user.username?%>
+            <h2 class="media-heading">Welcome <%=@user.username%> !</h2>
+          <%else%>
+            <h2 class="media-heading">Welcome <%=@user.email%> !</h2>
+          <%end%>
         </div>
         <div>
         <div>
           <h3>Registered Applications:</h3>
-          <%= render "registered_applications/registered_application" %>
+          <%=render "registered_applications/registered_application"%>
           <br>
           <div class="form-container col-md-10">
-            <%= render partial:'registered_applications/form', locals: {user: @user, registered_application: @registered_application} %>
+            <%=render partial:'registered_applications/form', locals: {user: @user, registered_application: @registered_application}%>
           </div>  
         </div>
-      <% else %>
+      <%else%>
         <div class="jumbotron title">
-          <h1 class= "title text-center">Blocmetrics</h1>
-          <p class= "text-center">Blocmetrics is a site that offers an analytics service to track events on websites</p>
-          <p class= "text-center">
-            <%= link_to "Sign In", new_user_session_path %> or
-            <%= link_to "Sign Up",new_user_registration_path, class: 'btn btn-primary' %> today!
+          <h1 class="title text-center">Blocmetrics</h1>
+          <p class="text-center">Blocmetrics is a site that offers an analytics service to track events on websites</p>
+          <p class="text-center">
+            <%=link_to "Sign In", new_user_session_path%> or
+            <%=link_to "Sign Up",new_user_registration_path, class:'btn btn-primary'%> today!
           </p>
         </div>
         <div class="row mission">
