@@ -9,10 +9,12 @@ class RegisteredApplicationsController < ApplicationController
   end
     
   def create
-    registered_application = current_user.registered_applications.new(registered_application_params)
-    if registered_application.save
+    @user = User.find(params[:user_id]) 
+    @registered_application = @user.registered_applications.new(registered_application_params)
+   
+    if @registered_application.save
       flash[:notice] = "Application registered successfully."
-    redirect_to root_path
+    redirect_to [@user,@registered_application]
     else
       flash[:alert] = "Application failed to register."
       redirect_to root_path

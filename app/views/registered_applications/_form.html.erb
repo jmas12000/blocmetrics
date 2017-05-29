@@ -1,4 +1,14 @@
 <%=form_for [current_user,@registered_application] do |f|%>
+  <% if @registered_application.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(@registered_application.errors.count, "error") %>.</h4>
+      <ul>
+        <% @registered_application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class= "container-fluid text-input">
     <div class="form-group">
       <%=f.label :name, class:'sr-only'%>
@@ -8,6 +18,6 @@
       <%=f.label :url, class: 'sr-only' %>
       <%=f.text_field :url, class: 'form-control text', placeholder: "Enter the websites address"%>
     </div>
-    <p class="text-warning submit"><%=f.submit "Submit item", class:'btn btn-success pull-right text-warning'%>
+    <p class="submit"><%=f.submit "Submit item", class:'btn btn-success pull-right'%>
   </div>
 <%end%>

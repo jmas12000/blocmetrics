@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <div class ="row center">
-    <h1><%=@registered_application.name%><br />
-    <h3><em class="text-warning">Analytics for : </em><b><%=@registered_application.url%></b><br />
+  <div class="row center">
+    <h1><b><%=@registered_application.name%></b></h1><br />
+    <h3><em class="text-warning">Analytics for :<br /> </em><b><%=@registered_application.url%></b><br />
     <h3 class="black">Events:</h3><br />
     <%@events.each do |name,events|%>
       <div>
