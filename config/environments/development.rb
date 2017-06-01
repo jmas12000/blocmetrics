@@ -41,8 +41,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['user_name'],
-    :password => ENV['password'],
+    :user_name => ENV['MAILER_USERNAME'],
+    :password => ENV['MAILER_PASSWORD'],
     :address => 'smtp.mailtrap.io',
     :domain => 'smtp.mailtrap.io',
     :port => '2525',

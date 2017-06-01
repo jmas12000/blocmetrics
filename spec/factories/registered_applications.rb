@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :registered_application do
     name "MyString"
-    URL "MyString"
+    url "www.mystring.test"
+    user
   end
 end

@@ -17,15 +17,19 @@ users = User.all
 end
 registered_applications = RegisteredApplication.all
 
-50.times do
+
+2000.times do
   Event.create!(
     registered_application:  registered_applications.sample,
-    name: Faker::Hacker.verb
+    name: Faker::Hacker.verb,
+    created_at: Faker::Date.between(7.days.ago, Date.today) 
   )
 end
 
+
+
  
-puts "Seed finished"
+puts "Seed finished" 
 puts "#{User.count} users created"
 puts "#{RegisteredApplication.count} registered applications created"
 puts "#{Event.count} events created"

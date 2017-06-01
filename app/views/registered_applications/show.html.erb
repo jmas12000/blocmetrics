@@ -1,12 +1,10 @@
 <div class="container-fluid">
   <div class="row center">
-    <h1><b><%=@registered_application.name%></b></h1><br />
-    <h3><em class="text-warning">Analytics for :<br /> </em><b><%=@registered_application.url%></b><br />
-    <h3 class="black">Events:</h3><br />
-    <%@events.each do |name,events|%>
-      <div>
-        <%=name%> <span class="badge"><%=events.count%></span>
-      </div>
-    <%end%>
+    <h2><span class="badge"><%=@registered_application.events.count%></span> <em>events</em> for: 
+    <b><%=@registered_application.name%></b></h2>
+    <div class="chart"> 
+      <%=pie_chart @registered_application.events.group(:name).count%>
+      <%=line_chart @registered_application.events.group_by_day(:created_at).count%>
+    </div>
   </div>
 </div>

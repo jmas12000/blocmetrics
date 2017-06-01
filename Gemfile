@@ -5,13 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
 group :development do 
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
    # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
@@ -46,6 +43,10 @@ gem 'faker'
 gem 'devise'
 #adds browser vendor prefixes automatically
 gem 'autoprefixer-rails'
-
+#Create beautiful JavaScript charts with one line of Ruby
+gem 'chartkick' 
+#The simplest way to group temporal data
+gem 'groupdate'
+gem 'pg' 
 
 
